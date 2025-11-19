@@ -1,0 +1,24 @@
+run the cmd as admin
+
+
+ssh-keygen -t ed25519 -C "aravindh@conversedatasolutions.com"
+
+
+
+type %USERPROFILE%\.ssh\id_ed25519.pub
+
+
+
+sc config ssh-agent start= demand - enable the ssh agent
+
+
+
+sc start ssh-agent
+
+
+ssh-add %USERPROFILE%\.ssh\id_ed25519
+
+
+
+ssh -T git@github.com
+
